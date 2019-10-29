@@ -110,8 +110,9 @@ function createClientCert {
     chmod 0400 $TARGETDIR/client-key.pem
     chmod 0444 $TARGETDIR/client-cert.pem
 
-    mv $TARGETDIR/client-key.pem $TARGETDIR/client-$NAME-key.pem
-    mv $TARGETDIR/client-cert.pem $TARGETDIR/client-$NAME-cert.pem 
+    #added to match Wappler's naming convention
+    mv $TARGETDIR/client-key.pem $TARGETDIR/key.pem
+    mv $TARGETDIR/client-cert.pem $TARGETDIR/cert.pem 
 }
 
 
